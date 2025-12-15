@@ -1,138 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>General-Purpose Languages</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    
-  <!--  <style>
-        /* Global Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General-Purpose Programming Languages</title>
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f6f0ed, #d1c4e9);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-            font-size: 2.5rem;
-            color: #4a148c;
-            margin-bottom: 10px;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        p {
-            text-align: center;
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            color: #555;
-        }
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle at top, #1e3c72, #0b1220);
+    color: #ffffff;
+}
 
-        /* Category Cards */
-        .category-box {
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            padding: 25px;
-            margin: 20px auto;
-            max-width: 600px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+/* Back Button */
+#back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
 
-        .category-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-        }
+#back-button button {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .category-box h3 {
-            color: #4a148c;
-            margin-bottom: 10px;
-        }
+#back-button button:hover {
+    background: rgba(255,255,255,0.35);
+}
 
-        .category-box p {
-            color: #666;
-            font-size: 1rem;
-        }
+/* Hero */
+header {
+    padding: 100px 20px 80px;
+    text-align: center;
+}
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
 
-        li {
-            background: #e1bee7;
-            margin: 10px 0;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: background 0.3s;
-        }
+header p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
 
-        li:hover {
-            background: #ce93d8;
-            cursor: pointer;
-        }
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        /* Back Button */
-        #back-button {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+}
 
-        #back-button button {
-            background-color: #4a148c;
-            color: #fff;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-        }
+/* Language Cards */
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
 
-        #back-button button:hover {
-            background-color: #6a1b9a;
-            transform: scale(1.05);
-        }
+.language-card {
+    background: rgba(255,255,255,0.12);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .category-box {
-                padding: 20px;
-            }
-            li {
-                padding: 10px 15px;
-            }
-        }
-    </style>  -->
+.language-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 35px 65px rgba(0,0,0,0.55);
+}
+
+/* Accent Colors */
+.language-card.php { border-top: 6px solid #8892BF; }
+.language-card.java { border-top: 6px solid #f44336; }
+.language-card.c { border-top: 6px solid #4caf50; }
+
+/* Image */
+.language-image {
+    height: 160px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.language-image img {
+    max-height: 90px;
+    max-width: 90%;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+}
+
+/* Card Content */
+.language-content {
+    padding: 30px;
+}
+
+.language-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.language-card.php h3 { color: #8892BF; }
+.language-card.java h3 { color: #f44336; }
+.language-card.c h3 { color: #4caf50; }
+
+.language-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.language-content button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.language-card.php button {
+    background: linear-gradient(135deg, #8892BF, #5c6bc0);
+}
+
+.language-card.java button {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+}
+
+.language-card.c button {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.language-content button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Details */
+.details {
+    margin-top: 25px;
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.details ul {
+    padding-left: 20px;
+}
+
+.details li {
+    margin-bottom: 8px;
+}
+
+/* Category Learning */
+.category-learn {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.category-box {
+    background: rgba(255,255,255,0.12);
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.category-box:hover {
+    transform: scale(1.06);
+}
+
+.category-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 12px;
+    color: #81d4fa;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
-    <div id="back-button">
-        <button onclick="window.location.href='index.html';">← Back to Main Page</button>
-    </div>
-    
+
+<div id="back-button">
+    <button onclick="window.location.href='index.html';">← Back</button>
+</div>
+
+<header>
+    <img src="IMAGES/General_Purpose_Lanuage_logo.png" alt="GPL Logo">
     <h1>General-Purpose Programming Languages</h1>
-    <p>General-purpose programming languages are versatile tools used to create a wide variety of applications, from web development to system software. Some popular languages include:</p>
-    
-    <div class="category-box">
-        <ul>
-            <li><strong>PHP</strong> – A widely used language for web development.</li>
-            <li><strong>Java</strong> – A versatile language used in enterprise and mobile applications.</li>
-            <li><strong>C</strong> – A powerful low-level language for system programming and performance-critical tasks.</li>
-        </ul>
+    <p>
+        General-purpose programming languages are designed to solve a wide variety of problems.
+        They are used to build websites, mobile apps, operating systems, games, and more.
+    </p>
+</header>
+
+<section>
+<h2>Explore the Languages</h2>
+
+<div class="language-grid">
+
+<!-- PHP -->
+<div class="language-card php">
+    <div class="language-image">
+        <img src="IMAGES/php_programming_language_logo.png" alt="PHP Logo">
     </div>
+    <div class="language-content">
+        <h3>PHP</h3>
+        <p>
+            PHP is a general-purpose scripting language especially suited for web development.
+            It runs on the server and generates dynamic web content.
+        </p>
+        <button>Learn More</button>
+        <div class="details">
+            <ul>
+                <li><strong>Primary Use:</strong> Backend Web Development</li>
+                <li><strong>Paradigm:</strong> Procedural / Scripting</li>
+                <li><strong>Strength:</strong> Database integration</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Java -->
+<div class="language-card java">
+    <div class="language-image">
+        <img src="IMAGES/Java_programming_language_logo.png" alt="Java Logo">
+    </div>
+    <div class="language-content">
+        <h3>Java</h3>
+        <p>
+            Java is a high-level, object-oriented language designed to run on many platforms
+            using the Java Virtual Machine.
+        </p>
+        <button onclick="window.location.href='JAVA.html';">Learn More</button>
+        <div class="details">
+            <ul>
+                <li><strong>Primary Use:</strong> Enterprise & Mobile Apps</li>
+                <li><strong>Paradigm:</strong> Object-Oriented</li>
+                <li><strong>Strength:</strong> Platform independence</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- C -->
+<div class="language-card c">
+    <div class="language-image">
+        <img src="IMAGES/C_programming_language_logo.png" alt="C Logo">
+    </div>
+    <div class="language-content">
+        <h3>C</h3>
+        <p>
+            C is a procedural language that provides low-level access to memory,
+            making it ideal for system-level programming.
+        </p>
+        <button>Learn More</button>
+        <div class="details">
+            <ul>
+                <li><strong>Primary Use:</strong> Systems Programming</li>
+                <li><strong>Paradigm:</strong> Procedural</li>
+                <li><strong>Strength:</strong> High performance</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Understanding the Category</h2>
+
+<div class="category-learn">
+    <div class="category-box">
+        <h3>What Makes a Language General-Purpose?</h3>
+        <p>
+            These languages are flexible and can be adapted to many different types of software,
+            unlike languages designed for a single task.
+        </p>
+    </div>
+
+    <div class="category-box">
+        <h3>Why Developers Use Them</h3>
+        <p>
+            They offer versatility, strong community support, and libraries that speed up development.
+        </p>
+    </div>
+
+    <div class="category-box">
+        <h3>Impact on Technology</h3>
+        <p>
+            General-purpose languages power much of today’s digital world,
+            from web servers to operating systems.
+        </p>
+    </div>
+</div>
+</section>
+
+<footer>
+© 2025 • General-Purpose Programming Languages Project
+</footer>
+
 </body>
 </html>

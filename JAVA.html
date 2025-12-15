@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Programming Language</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle at top, #b71c1c, #0b1220);
+    color: #ffffff;
+}
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+.back-btn a {
+    background: rgba(255,255,255,0.15);
+    padding: 12px 18px;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.back-btn a:hover { background: rgba(255,255,255,0.35); }
+
+/* Header */
+header {
+    padding: 100px 20px 50px;
+    text-align: center;
+}
+header img {
+    max-width: 100px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 8px 14px rgba(0,0,0,0.4));
+}
+header h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 15px; }
+header p { max-width: 800px; margin: auto; line-height: 1.6; opacity: 0.95; }
+
+/* Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* Sidebar Topics */
+.sidebar {
+    background: rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 25px;
+}
+.sidebar h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff8a80;
+    margin-bottom: 15px;
+}
+.sidebar ul { list-style-type: disc; padding-left: 20px; }
+.sidebar li { margin-bottom: 10px; }
+
+/* Info Box */
+.info-box {
+    background: rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+.info-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff5252;
+    margin-bottom: 12px;
+}
+
+/* Code Section */
+.code-section {
+    background: rgba(0,0,0,0.35);
+    padding: 25px;
+    border-radius: 15px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+pre {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .main-content { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="back-btn">
+    <a href="../general-purpose.html">← Back to Languages</a>
+</div>
+
+<header>
+    <img src="../IMAGES/Java_programming_language_logo.png" alt="Java Logo">
+    <h1>Java Programming Language</h1>
+    <p>Java is a high-level, object-oriented, general-purpose programming language that runs on the Java Virtual Machine (JVM).</p>
+</header>
+
+<div class="main-content">
+
+    <!-- Sidebar: Topics -->
+    <div class="sidebar">
+        <h2>Topics</h2>
+        <ul>
+            <li>Introduction</li>
+            <li>Object-Oriented Concepts</li>
+            <li>Common Uses</li>
+            <li>Example Code</li>
+            <li>History</li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div>
+        <!-- Info Box -->
+        <div class="info-box">
+            <h3>About Java</h3>
+            <p>
+                Java is platform-independent, object-oriented, and secure. It is widely used in Android apps, enterprise software, and backend web systems.
+            </p>
+            <ul>
+                <li><strong>Paradigm:</strong> Object-Oriented</li>
+                <li><strong>Platform:</strong> JVM (Write Once, Run Anywhere)</li>
+                <li><strong>Strengths:</strong> Security, Scalability, Large Libraries</li>
+            </ul>
+        </div>
+
+        <!-- Code Segment -->
+        <div class="code-section">
+<pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+</pre>
+        </div>
+
+        <!-- Additional Info Box -->
+        <div class="info-box">
+            <h3>Java Usage & History</h3>
+            <p>
+                Java was released in 1995 by Sun Microsystems and later acquired by Oracle. It remains one of the most popular programming languages worldwide.
+            </p>
+            <ul>
+                <li>Used for Android mobile apps</li>
+                <li>Enterprise and server applications</li>
+                <li>Backend web systems</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 • Java Programming Language Page
+</footer>
+
+</body>
+</html>
